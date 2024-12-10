@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon_site2 - Lycée Provincial du Ioba</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f1f1f1;
+            overflow-x: hidden;
+        }
+
+        .section {
+            display: none;
+            text-align: center;
+            padding: 50px;
+            height: 100vh;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #FF6F61;
+            text-shadow: 0 0 15px #FF6F61, 0 0 20px #FF6F61;
+        }
+
+        p {
+            font-size: 20px;
+            color: #cccccc;
+            line-height: 1.5;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            background: #FF6F61;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #D85C48;
+            transform: scale(1.1);
+        }
+
+        .activity-card {
+            background: #333;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 10px;
+            color: #fff;
+            display: inline-block;
+            width: 280px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .activity-card:hover {
+            transform: scale(1.05);
+            background-color: #444;
+        }
+
+        .testimonials-section {
+            background-color: #FF6F61;
+            padding: 50px;
+            color: #fff;
+        }
+
+        .testimonial {
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .testimonial h3 {
+            font-weight: bold;
+        }
+
+        #thankYouSection {
+            background-color: #1a1a1a;
+            color: #FF6F61;
+            padding: 100px 50px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #helloSection { background-color: #1a1a1a; }
+        #welcomeSection { background-color: #1a1a1a; }
+        #aboutSection { background-color: #1a1a1a; }
+        #activitesSection { background-color: #1a1a1a; }
+        #testimonialsSection { background-color: #FF6F61; }
+    </style>
+</head>
+<body>
+
+    <!-- Section Hello -->
+    <div class="section active" id="helloSection">
+        <h1>Hello, ça va ?</h1>
+        <a href="javascript:void(0)" class="btn" onclick="showSection('welcomeSection')">Suivant</a>
+    </div>
+
+    <!-- Section Bienvenue -->
+    <div class="section" id="welcomeSection">
+        <h1>Bienvenue au Lycée Provincial du Ioba</h1>
+        <p>Nous sommes ravis de vous accueillir sur le site officiel de notre lycée. Découvrez notre histoire, nos activités, et tout ce qui fait notre fierté. Bonne navigation !</p>
+        <a href="javascript:void(0)" class="btn" onclick="showSection('aboutSection')">Suivant</a>
+    </div>
+
+    <!-- Section À propos -->
+    <div class="section" id="aboutSection">
+        <h1>À propos du Lycée Provincial du Ioba</h1>
+        <p>Le Lycée Provincial du Ioba est situé aux secteurs 3 de Dano. Il regroupe environ 1000 élèves, dont 600 filles et 400 garçons répartis dans 21 classes. Le lycée offre une formation académique de qualité et encourage le développement personnel des élèves à travers diverses activités.</p>
+        <a href="javascript:void(0)" class="btn" onclick="showSection('activitesSection')">Suivant</a>
+    </div>
+
+    <!-- Section Activités -->
+    <div class="section" id="activitesSection">
+        <h1>Nos Activités</h1>
+
+        <div class="activity-card">
+            <h2>Rencontres Religieuses</h2>
+            <p>Des moments spirituels pour renforcer la foi et la communauté.</p>
+        </div>
+
+        <div class="activity-card">
+            <h2>Sport (Handball & Interclasses)</h2>
+            <p>Les compétitions sportives développent l'esprit d'équipe et de compétition.</p>
+        </div>
+
+        <div class="activity-card">
+            <h2>Nuits Culturelles</h2>
+            <p>Des spectacles pour mettre en avant notre culture.</p>
+        </div>
+
+        <a href="javascript:void(0)" class="btn" onclick="showSection('testimonialsSection')">Suivant</a>
+    </div>
+
+    <!-- Section Témoignages -->
+    <div class="section" id="testimonialsSection">
+        <h2>Témoignages</h2>
+        <div class="testimonial">
+            <p>"Le Lycée Provincial du Ioba m'a permis de découvrir mes talents et d'améliorer mes compétences. Un environnement propice à l'épanouissement !"</p>
+            <h3>WAGUE Aboubacar</h3>
+        </div>
+
+        <div class="testimonial">
+            <p>"L'enseignement ici est de grande qualité et les professeurs sont toujours disponibles pour nous aider."</p>
+            <h3>SAVADOGO Sakina</h3>
+        </div>
+
+        <div class="testimonial">
+            <p>"C'est un endroit où j'ai appris beaucoup, non seulement sur le plan académique, mais aussi sur le plan personnel."</p>
+            <h3>TIENDREBEOGO Madinatou</h3>
+        </div>
+
+        <div class="testimonial">
+            <p>"Le lycée m'a beaucoup apporté, c'est ici que j'ai découvert ma passion pour la culture et les arts."</p>
+            <h3>KONTYARE Ganiyou</h3>
+        </div>
+
+        <a href="javascript:void(0)" class="btn" onclick="showSection('thankYouSection')">Suivant</a>
+    </div>
+
+    <!-- Page de remerciement -->
+    <div class="section" id="thankYouSection">
+        <h1>Merci d'avoir visité notre site !</h1>
+        <p>Nous vous souhaitons une excellente journée, pleine de succès et de bonheur. À bientôt !</p>
+        <a href="javascript:void(0)" class="btn" onclick="showSection('helloSection')">Retour à l'Accueil</a>
+    </div>
+
+    <script>
+        let currentSectionIndex = 0;
+        const sections = document.querySelectorAll('.section');
+
+        function showSection(id) {
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
